@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 300vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #23E3C9;
+}
+.slider{
+    width:100vw;
+    height:148vh;
+    /* border-radius: 0.8rem; */
+    overflow: hidden;
+}
+.slides{
+ display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    transition:2s;
+
+}
+.navigationManual{
+    position: absolute;
+    width: 99vw;
+    margin-top:70vh;
+    display: flex;
+    justify-content: center;
+
+}
+.manualBtn{
+    border: 0.01rem solid blanchedalmond;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.manualBtn:not(:last-child){
+    margin-right: 5vw;
+}
+.manualBtn:hover{
+    background: #40D3DC;
+}
+#radio1:checked~.first{
+    margin-left: 0;
+}
+#radio2:checked~.first{
+    margin-left: -100%;
+}
+#radio3:checked~.first{
+    margin-left: -200%;
+}
+#radio4:checked~.first{
+    margin-left: -300%;
+}
+.navigationAuto{
+    position: absolute;
+    width: 99vw;
+    margin-top:70vh;
+    display: flex;
+    justify-content: center;
+}
+.navigationAuto .autobtn{
+    border: 0.01rem solid blanchedalmond;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 1s;
+    visibility: hidden;
+}
+.navigationAuto div:not(:last-child){
+    margin-right: -10vw;
+}
+radio1:checked~.navigationAuto .autobtn1{
+    margin-left: 0;
+}
+
+radio1:checked~.navigationAuto .autobtn2{
+    margin-left: -100%;
+}
+radio1:checked~.navigationAuto .autobtn3{
+    margin-left: -200%;
+}
+radio1:checked~.navigationAuto .autobtn4{
+    margin-left: -300%;
+}
+
